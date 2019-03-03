@@ -3,6 +3,7 @@ package com.example.pedrorpmoura.teste;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private NavigationView mNavigationView;
+    private FragmentTransaction mFragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,37 +36,45 @@ public class MainActivity extends AppCompatActivity {
         mNavigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                        int id = menuItem.getItemId();
-                        Intent intent;
-                        switch(id) {
+                    public boolean onNavigationItemSelected(MenuItem item) {
+                        mDrawerLayout.closeDrawers();
+                        item.setChecked(true);
+                        switch(item.getItemId()) {
                             case R.id.home_page:
-                                intent = new Intent(MainActivity.this,
-                                        MainActivity.class);
-                                startActivity(intent);
-                                return true;
-                            case R.id.rooms:
-                                intent = new Intent(MainActivity.this,
-                                        RoomsActivity.class);
-                                startActivity(intent);
-                                return true;
-                            case R.id.interactive_map:
-                                intent = new Intent(MainActivity.this,
-                                        MapActivity.class);
-                                startActivity(intent);
-                                return true;
-                            case R.id.quiz:
-                                intent = new Intent(MainActivity.this,
-                                        QuizActivity.class);
-                                startActivity(intent);
-                                return true;
-                            default:
+                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                                mFragmentTransaction.replace(R.id.main_container, new HomeFragment());
+                                mFragmentTransaction.commit();
+                                getSupportActionBar().setTitle("Home Fragment");
                                 break;
+                            case R.id.rooms:
+                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                                mFragmentTransaction.replace(R.id.main_container, new RoomsFragment());
+                                mFragmentTransaction.commit();
+                                getSupportActionBar().setTitle("Salas");
+                                break;
+                            case R.id.interactive_map:
+                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                                mFragmentTransaction.replace(R.id.main_container, new MapFragment());
+                                mFragmentTransaction.commit();
+                                getSupportActionBar().setTitle("Mapa Interativo");
+                                break;
+                            case R.id.quiz:
+                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                                mFragmentTransaction.replace(R.id.main_container, new QuizFragment());
+                                mFragmentTransaction.commit();
+                                getSupportActionBar().setTitle("Quiz");
+                                break;
+
                         }
-                        return false;
+                        return true;
                     }
                 }
         );
+
+        mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+        mFragmentTransaction.add(R.id.main_container, new HomeFragment());
+        mFragmentTransaction.commit();
+        getSupportActionBar().setTitle("Home Fragment");
     }
 
 
