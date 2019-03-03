@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">teste</string>
+
+    <string name="navigation_menu">Menu</string>
+    <string name="home_page">Página Inicial</string>
+    <string name="rooms">Salas</string>
+    <string name="interactive_map">Mapa Interativo</string>
+    <string name="quiz">Quiz</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

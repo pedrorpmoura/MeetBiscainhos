@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home_page"
+        android:title="@string/home_page"/>
+
+    <item android:id="@+id/rooms"
+        android:title="@string/rooms"/>
+
+    <item android:id="@+id/interactive_map"
+        android:title="@string/interactive_map"/>
+
+    <item android:id="@+id/quiz"
+        android:title="@string/quiz"/>
+
+</menu>
