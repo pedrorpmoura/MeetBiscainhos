@@ -21,7 +21,7 @@ public class RoomsActivity extends AppCompatActivity {
     private NavigationView mNavigationView;
 
     private ListView mListView;
-    String listOfRooms[] = {"Sala 1", "Sala 2", "Sala 3", "Sala 4", "Sala 5"};
+    String listOfRooms[] = {"Sala 1", "Sala 2", "Sala 3", "Sala 4", "Sala 5", "Sala 6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
