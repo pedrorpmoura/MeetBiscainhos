@@ -14,6 +14,7 @@ public class ImageAdapter extends PagerAdapter {
     private int[] mImageIds = new int[] {R.drawable.captura_de_ecr__de_2018_12_20_22_58_58,
                                          R.drawable.captura_de_ecr__de_2018_12_20_22_59_07};
 
+
     ImageAdapter(Context context){
         mContext = context;
     }
