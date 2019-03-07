@@ -8,9 +8,8 @@
 
     <!-- TODO: Update blank fragment layout -->
     <ListView
-        android:id="@+id/RoomsView"
+        android:id="@+id/list_of_rooms"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
