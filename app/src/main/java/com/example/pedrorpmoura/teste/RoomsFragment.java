@@ -14,14 +14,14 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class RoomsFragmentTest extends Fragment {
+public class RoomsFragment extends Fragment {
 
     private ListView mListView;
     private ArrayList<MRoom> rooms = new ArrayList<>();
     private RoomsAdapter mAdapter;
     private RoomFragment room_fragment;
 
-    public RoomsFragmentTest() {
+    public RoomsFragment() {
 
     }
 
