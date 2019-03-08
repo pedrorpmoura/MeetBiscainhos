@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                                 createFragment(new HomeFragment(), "Home");
                                 break;
                             case R.id.rooms:
-                                createFragment(new RoomsFragment(), "Salas");
+                                createFragment(new RoomsFragment(), "Áreas do Museu");
                                 break;
                             case R.id.interactive_map:
                                 createFragment(new MapFragment(), "Mapa Interativo");
