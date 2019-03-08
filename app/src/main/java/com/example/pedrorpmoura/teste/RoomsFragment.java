@@ -37,12 +37,19 @@ public class RoomsFragment extends Fragment {
                 container, false);
         mListView = (ListView) root_view.findViewById(R.id.list_of_rooms);
 
-        rooms.add(new MRoom(1,"Oratório","Isto é o oratório."));
-        rooms.add(new MRoom(2,"Sala de Jogos", "Isto é a sala de jogos."));
+        rooms.add(new MRoom(1,"Oratório","Isto é o oratório.",
+                new int[] {R.drawable.oratorio1,
+                           R.drawable.oratorio2,
+                           R.drawable.oratorio3,
+                           R.drawable.oratorio4}));
+        rooms.add(new MRoom(2,"Sala de Jogos", "Isto é a sala de jogos.",
+                new int[] {}));
         rooms.add(new MRoom(3,"Sala de Mosaicos", "Esta é a sala dos " +
-                "mosaicos."));
-        rooms.add(new MRoom(4,"Jardim", "Isto é o jardim."));
-        rooms.add(new MRoom(5,"Random", "cenas random."));
+                "mosaicos.", new int[] {}));
+        rooms.add(new MRoom(4,"Jardim", "Isto é o jardim.",
+                new int[] {}));
+        rooms.add(new MRoom(5,"Random", "cenas random.",
+                new int[] {}));
 
         mAdapter = new RoomsAdapter(getActivity(), rooms);
         mListView.setAdapter(mAdapter);
@@ -62,7 +69,6 @@ public class RoomsFragment extends Fragment {
 
         return root_view;
     }
-
 
 
     public void replaceFragment(Fragment someFragment) {

@@ -19,7 +19,6 @@
         <activity android:name=".RoomsActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".QuizActivity" />
-        <activity android:name=".Room1"></activity>
     </application>
 
 </manifest>
