@@ -6,12 +6,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
+
+    private ViewFlipper v_flipper;
+
 
 
     public HomeFragment() {
@@ -22,8 +27,30 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        View root_view = inflater.inflate(R.layout.fragment_home, container, false);
+        int carousel[] = {R.drawable.captura_de_ecr__de_2018_12_20_22_59_07, R.drawable.captura_de_ecr__de_2018_12_20_22_58_58};
+        v_flipper = (ViewFlipper) root_view.findViewById(R.id.v_flipper);
+
+        for(int image: carousel){
+            flipperImages(image);
+        }
+
+        return root_view;
+    }
+
+    public void flipperImages(int image){
+        ImageView imageView = new ImageView(getActivity());
+        imageView.setBackgroundResource(image);
+
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation(getActivity(), android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(getActivity(), android.R.anim.slide_out_right);
+
     }
 
 }

@@ -5,11 +5,38 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home Fragment"
-        android:gravity="center"/>
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:fontFamily="cursive"
+            android:text="meetBiscainhos"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ViewFlipper
+            android:id="@+id/v_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin = "20dp"
+            android:text="Exemplo Exemplo Exemplo Exemplo Exemplo Exemplo Exemplo Exemplo
+Exemplo Exemplo Exemplo" />
+
+
+
+
+    </LinearLayout>
 
 </FrameLayout>
