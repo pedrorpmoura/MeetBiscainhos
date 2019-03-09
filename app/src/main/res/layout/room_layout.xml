@@ -7,37 +7,54 @@
             type="com.example.pedrorpmoura.teste.MRoom" />
     </data>
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/room_view_pager"
-                android:layout_width="match_parent"
-                android:layout_height="250dp" />
-
-            <TextView
-                android:id="@+id/room_name"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:gravity="center"
-                android:text="@{room.name}"
-                android:textSize="40sp" />
-
-            <TextView
-                android:id="@+id/room_description"
+            <LinearLayout
+                android:id="@+id/scrollView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@{room.description}"
-                android:textSize="20sp" />
+                android:orientation="vertical">
 
-        </LinearLayout>
-    </ScrollView>
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/room_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <TextView
+                    android:id="@+id/room_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:text="@{room.name}"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/room_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@{room.description}"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/sound_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/udio_guia" />
+
+    </RelativeLayout>
+
+
 
 </layout>

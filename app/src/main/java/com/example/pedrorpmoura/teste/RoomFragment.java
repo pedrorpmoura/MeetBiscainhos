@@ -1,12 +1,15 @@
 package com.example.pedrorpmoura.teste;
 
+import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.pedrorpmoura.teste.databinding.RoomLayoutBinding;
 
@@ -15,6 +18,8 @@ public class RoomFragment extends Fragment {
     private MRoom room;
     private ViewPager mViewPager;
     private RoomImageAdapter mAdapter;
+    static MediaPlayer sound;
+
 
     public RoomFragment() {
 
@@ -38,6 +43,39 @@ public class RoomFragment extends Fragment {
         mAdapter = new RoomImageAdapter(getActivity(), room.getRoomPics());
         mViewPager.setAdapter(mAdapter);
 
+        sound = MediaPlayer.create(getActivity(), room.getSound());
+        final Button playSound = (Button) view.findViewById(R.id.sound_button);
+
+        playSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currentText = playSound.getText().toString();
+                playSound.setText(currentText.equals("Começar áudio-guia") ? "Pausar áudio-guia" : "Começar áudio-guia");
+
+                if(sound.isPlaying()){
+                    sound.pause();
+                }else {
+                    sound.start();
+                }
+            }
+        });
+
+        sound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer sound) {
+                playSound.setText("Começar áudio-guia");
+            }
+
+        });
+
         return view;
     }
+
+    public void onPause(){
+        super.onPause();
+        sound.stop();
+
+    }
+
 }

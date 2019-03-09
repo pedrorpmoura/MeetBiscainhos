@@ -38,28 +38,28 @@ public class RoomsFragment extends Fragment {
         mListView = (ListView) root_view.findViewById(R.id.list_of_rooms);
 
         rooms.add(new MRoom(1,"Sala de Entrada","Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(2,"Salão Nobre", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(3,"Oratório", "Inserir descrição",
                 new int[] {R.drawable.oratorio1,
                            R.drawable.oratorio2,
                            R.drawable.oratorio3,
-                           R.drawable.oratorio4}));
+                           R.drawable.oratorio4}, R.raw.sound_sample));
         rooms.add(new MRoom(4,"Sala do Lavor", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(5,"Salão de Música e do Jogo", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(6,"Gabinete", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(7,"Sala de Jantar", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(8,"Cavalariças", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(9,"Cozinha", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
         rooms.add(new MRoom(10,"Jardins", "Inserir descrição",
-                new int[] {}));
+                new int[] {}, R.raw.sound_sample));
 
         mAdapter = new RoomsAdapter(getActivity(), rooms);
         mListView.setAdapter(mAdapter);
