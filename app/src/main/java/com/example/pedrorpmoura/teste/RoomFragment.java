@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -39,6 +40,8 @@ public class RoomFragment extends Fragment {
         binding.setRoom(this.room);
 
         mViewPager = (ViewPager) view.findViewById(R.id.room_view_pager);
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(mViewPager, true);
         //mAdapter = new RoomImageAdapter(getActivity(), room.getRoomPics());
         mAdapter = new RoomImageAdapter(getActivity(), room.getRoomPics());
         mViewPager.setAdapter(mAdapter);
