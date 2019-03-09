@@ -9,14 +9,15 @@ public class MRoom {
     private int ala;
     private String name;
     private String description;
-    //private String[] room_pics;
+    private int[] room_pics;
     //private ArrayList<MObject> room_objects;
 
 
-    public MRoom(int ala, String name, String description) {
+    public MRoom(int ala, String name, String description, int[] room_pics) {
         this.ala = ala;
         this.name = name;
         this.description = description;
+        this.room_pics = room_pics;
     }
 
     public int getAla() {
@@ -32,10 +33,11 @@ public class MRoom {
         return this.description;
     }
 
-    /*public String[] getRoom_pics() {
+    public int[] getRoomPics() {
         return this.room_pics;
     }
 
+    /*
     public ArrayList<MObject> getRoom_objects() {
         return this.room_objects;
     }*/
@@ -53,10 +55,11 @@ public class MRoom {
         this.description = description;
     }
 
-    /*public void setRoom_pics(String[] room_pics) {
+    public void setRoomPics(int[] room_pics) {
         this.room_pics = room_pics;
     }
 
+    /*
     public void setRoom_objects(ArrayList<MObject> room_objects) {
         this.room_objects = room_objects;
     }*/

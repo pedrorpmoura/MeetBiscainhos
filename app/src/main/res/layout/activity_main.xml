@@ -18,7 +18,6 @@
             android:id="@+id/main_container">
         </LinearLayout>
 
-
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
@@ -30,7 +29,5 @@
         android:id="@+id/navigation_view">
 
     </android.support.design.widget.NavigationView>
-
-
 
 </android.support.v4.widget.DrawerLayout>

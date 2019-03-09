@@ -1,6 +1,7 @@
 package com.example.pedrorpmoura.teste;
 
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -38,30 +39,16 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         switch(item.getItemId()) {
                             case R.id.home_page:
-                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                                mFragmentTransaction.replace(R.id.main_container, new HomeFragment());
-                                mFragmentTransaction.commit();
-                                getSupportActionBar().setTitle("Home Fragment");
+                                createFragment(new HomeFragment(), "Home");
                                 break;
                             case R.id.rooms:
-                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                                //mFragmentTransaction.replace(R.id.main_container, new RoomsFragment());
-                                mFragmentTransaction.replace(R.id.main_container, new RoomsFragment());
-                                mFragmentTransaction.addToBackStack(null);
-                                mFragmentTransaction.commit();
-                                getSupportActionBar().setTitle("Salas");
+                                createFragment(new RoomsFragment(), "Áreas do Museu");
                                 break;
                             case R.id.interactive_map:
-                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                                mFragmentTransaction.replace(R.id.main_container, new MapFragment());
-                                mFragmentTransaction.commit();
-                                getSupportActionBar().setTitle("Mapa Interativo");
+                                createFragment(new MapFragment(), "Mapa Interativo");
                                 break;
                             case R.id.quiz:
-                                mFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                                mFragmentTransaction.replace(R.id.main_container, new QuizFragment());
-                                mFragmentTransaction.commit();
-                                getSupportActionBar().setTitle("Quiz");
+                                createFragment(new QuizFragment(), "Quiz");
                                 break;
 
                         }
@@ -70,10 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        mFragmentTransaction = getSupportFragmentManager().beginTransaction();
-        mFragmentTransaction.add(R.id.main_container, new HomeFragment());
-        mFragmentTransaction.commit();
-        getSupportActionBar().setTitle("Home Fragment");
+        createFragment(new HomeFragment(), "Home");
     }
 
 
@@ -95,5 +79,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    public void createFragment(Fragment fragment, String title) {
+        mFragmentTransaction = getSupportFragmentManager().beginTransaction();
+        mFragmentTransaction.replace(R.id.main_container, fragment);
+        mFragmentTransaction.commit();
+        getSupportActionBar().setTitle(title);
     }
 }
