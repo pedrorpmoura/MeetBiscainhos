@@ -3,10 +3,12 @@ package com.example.pedrorpmoura.teste;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 
@@ -18,7 +20,6 @@ public class HomeFragment extends Fragment {
     private ViewFlipper v_flipper;
 
 
-
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -28,9 +29,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         View root_view = inflater.inflate(R.layout.fragment_home, container, false);
-        int carousel[] = {R.drawable.captura_de_ecr__de_2018_12_20_22_59_07, R.drawable.captura_de_ecr__de_2018_12_20_22_58_58};
+        int carousel[] = {R.drawable.oratorio1, R.drawable.oratorio2, R.drawable.oratorio3};
         v_flipper = (ViewFlipper) root_view.findViewById(R.id.v_flipper);
 
         for(int image: carousel){
