@@ -1,6 +1,5 @@
 package com.example.pedrorpmoura.teste;
 
-import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -53,7 +52,8 @@ public class RoomFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String currentText = playSound.getText().toString();
-                playSound.setText(currentText.equals("Começar áudio-guia") ? "Pausar áudio-guia" : "Começar áudio-guia");
+                playSound.setText(currentText.equals("Começar áudio-guia")
+                        ? "Pausar áudio-guia" : "Começar áudio-guia");
 
                 if(sound.isPlaying()){
                     sound.pause();
