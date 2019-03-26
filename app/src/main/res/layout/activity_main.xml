@@ -21,12 +21,22 @@
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        android:id="@+id/navigation_view">
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header">
+        <!--app:menu="@menu/navigation_menu"-->
+
+
+        <ExpandableListView
+            android:id="@+id/nav_menu"
+            android:layout_marginTop="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:groupIndicator="@android:color/transparent">
+        </ExpandableListView>
 
     </android.support.design.widget.NavigationView>
 
