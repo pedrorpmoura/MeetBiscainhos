@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.lang.Object;
@@ -19,6 +20,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context mContext;
     private List<ExpandedMenuModel> mListDataHeader;
+
+    private static final int[] EMPTY_STATE_SET = {};
+    private static final int[] GROUP_EXPANDED_STATE_SET = { android.R.attr.state_expanded };
+    private static final int[][] GROUP_STATE_SETS = { EMPTY_STATE_SET, // 0
+            GROUP_EXPANDED_STATE_SET // 1
+    };
 
     // child data
     private HashMap<ExpandedMenuModel, List<String>> mListDataChild;
@@ -83,6 +90,25 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.expanded_list_group);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle.getIconName());
+
+        View ind = convertView.findViewById(R.id.explist_indicator);
+
+        if (ind != null)
+        {
+            ImageView indicator = (ImageView) ind;
+            if (groupPosition != 1)
+            {
+                indicator.setVisibility(View.INVISIBLE);
+            }
+            else
+            {
+                indicator.setVisibility(View.VISIBLE);
+                int stateSetIndex = (isExpanded ? 1 : 0);
+                Drawable drawable = indicator.getDrawable();
+                drawable.setState(GROUP_STATE_SETS[stateSetIndex]);
+            }
+        }
+
         return convertView;
     }
 
@@ -101,6 +127,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.expanded_list_item);
 
         txtListChild.setText(childText);
+
 
         return convertView;
     }
