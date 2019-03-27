@@ -21,12 +21,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Context mContext;
     private List<ExpandedMenuModel> mListDataHeader;
 
-    private static final int[] EMPTY_STATE_SET = {};
-    private static final int[] GROUP_EXPANDED_STATE_SET = { android.R.attr.state_expanded };
-    private static final int[][] GROUP_STATE_SETS = { EMPTY_STATE_SET, // 0
-            GROUP_EXPANDED_STATE_SET // 1
-    };
-
     // child data
     private HashMap<ExpandedMenuModel, List<String>> mListDataChild;
     ExpandableListView expandList;
@@ -103,9 +97,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             else
             {
                 indicator.setVisibility(View.VISIBLE);
-                int stateSetIndex = (isExpanded ? 1 : 0);
-                Drawable drawable = indicator.getDrawable();
-                drawable.setState(GROUP_STATE_SETS[stateSetIndex]);
+                indicator.setImageResource(
+                        isExpanded ? R.drawable.expander_ic_maximized : R.drawable.expander_ic_minimized);
             }
         }
 
