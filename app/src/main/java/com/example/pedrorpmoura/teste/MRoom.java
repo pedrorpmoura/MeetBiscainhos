@@ -4,6 +4,9 @@ package com.example.pedrorpmoura.teste;
 
 //import java.util.ArrayList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MRoom {
 
     private int ala;
@@ -11,10 +14,11 @@ public class MRoom {
     private String description;
     private int[] room_pics;
     private int sound;
-    //private ArrayList<MObject> room_objects;
+    private List<MObject> room_objects = new ArrayList<>();
 
 
-    public MRoom(int ala, String name, String description, int[] room_pics, int sound) {
+    public MRoom(int ala, String name, String description,
+                 int[] room_pics, int sound) {
         this.ala = ala;
         this.name = name;
         this.description = description;
@@ -41,10 +45,9 @@ public class MRoom {
 
     public int getSound() { return this.sound;}
 
-    /*
-    public ArrayList<MObject> getRoom_objects() {
+    public List<MObject> getRoom_objects() {
         return this.room_objects;
-    }*/
+    }
 
 
     public void setAla(int ala) {
@@ -65,8 +68,7 @@ public class MRoom {
 
     public void setSound(int sound) {this.sound = sound;}
 
-    /*
-    public void setRoom_objects(ArrayList<MObject> room_objects) {
+    public void setRoom_objects(List<MObject> room_objects) {
         this.room_objects = room_objects;
-    }*/
+    }
 }

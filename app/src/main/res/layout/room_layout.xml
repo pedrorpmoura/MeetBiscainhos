@@ -15,7 +15,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true">
 
             <LinearLayout
                 android:id="@+id/scrollView"
@@ -26,19 +27,22 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <android.support.v4.view.ViewPager
                         android:id="@+id/room_view_pager"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp" />
+                        android:layout_height="250dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
 
                     <android.support.design.widget.TabLayout
                         android:id="@+id/tabDots"
-                        android:layout_alignParentBottom="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
                         app:tabBackground="@drawable/tab_selector"
                         app:tabGravity="center"
-                        app:tabIndicatorHeight="0dp"/>
+                        app:tabIndicatorHeight="0dp" />
                 </RelativeLayout>
 
                 <TextView
@@ -49,13 +53,29 @@
                     android:text="@{room.name}"
                     android:textSize="40sp" />
 
-                <TextView
-                    android:id="@+id/room_description"
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabItems"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="@{room.description}"
-                    android:textSize="20sp" />
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/description_tab_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description" />
+
+                    <android.support.design.widget.TabItem
+                        android:id="@+id/pics_tab_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/room_objects" />
+
+                </android.support.design.widget.TabLayout>
+
+                <com.example.pedrorpmoura.teste.HeightWrappingViewPager
+                    android:id="@+id/room_tabs_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
