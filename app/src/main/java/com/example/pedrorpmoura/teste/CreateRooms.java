@@ -49,15 +49,74 @@ public class CreateRooms {
                         "durante as quais a música (cantada e/ou tocada) e o jogo eram " +
                         "frequentes.\n\n",
                 new int[] {}, R.raw.sound_sample));
-        rooms.add(new MRoom(6,"Gabinete", "Inserir descrição",
+        rooms.add(new MRoom(6,"Gabinete",
+                "Nos séculos XVII e XVIII, ainda proliferavam os “Gabinetes de " +
+                        "Curiosidades”.\n" +
+                        "Com origem no renascimento, período de expansão intercontinental " +
+                        "que disseminara na europa à procura de espécimes de toda a ordem, " +
+                        "belos e raros.\n" +
+                        "A Casa Senhorial dispunha habitualmente uma Biblioteca, também " +
+                        "reconhecida de Livraria, em que se incluía o Cartório, que " +
+                        "consistia no conjunto de documentos respeitantes ao património " +
+                        "e respetiva administração e assuntos diversos relacionados com " +
+                        "a família. Espaço de características Neoclássicas, pois apresenta " +
+                        "um teto ornamental de estuques relevados pintura central e um " +
+                        "revestimento parietal azulejar.\n\n",
                 new int[] {}, R.raw.sound_sample));
-        rooms.add(new MRoom(7,"Sala de Jantar", "Inserir descrição",
+        rooms.add(new MRoom(7,"Sala de Jantar",
+                "A Sala de Jantar como espaço fixo para tomar as refeições " +
+                        "surgiu em Portugal a partir do terceiro quartel do século XVIII. " +
+                        "Até então as refeições eram servidas em diferentes espaços da " +
+                        "casa de acordo com a disposição dos donos. Os lacaios deslocavam " +
+                        "as mesas que cobriam com os têxteis, usando serviços de estanho " +
+                        "e de prata, e de cerâmica (europeia e chinesa).\n" +
+                        "A sala é revestida com painéis de azulejo e pinturas neoclássicas " +
+                        "ao gosto dos finais do século XVIII.\n" +
+                        "Nos banquetes, apresentação dos pratos era especialmente elaborada" +
+                        " e os alimentos em abundância. Todas as refeições eram geralmente " +
+                        "servidas por lacaios ou escravos, em grande número nestas casas, " +
+                        "habitualmente trajando ricas librés (fardas).\n\n",
                 new int[] {}, R.raw.sound_sample));
-        rooms.add(new MRoom(8,"Cavalariças", "Inserir descrição",
+        rooms.add(new MRoom(8,"Cavalariças",
+                "Em Portugal a equitação foi tradicionalmente apreciada ao nível " +
+                        "da nobreza. É conhecido também o gosto dos monarcas portugueses pela " +
+                        "arte de cavalgar. Quando em 1761, o Colégio Real dos Nobres foi " +
+                        "instituído pelo Marquês de Pombal, primeiro ministro do Rei D. José I, " +
+                        "aquela prática, juntamente com a esgrima compunham o módulo desportivo " +
+                        "do estabelecimento. \n" +
+                        "Nas casas senhoriais existiam cavalos, mulas, burros ou mesmo bois para " +
+                        "transporte. A cavalariça é uma adaptação realizada no século XIX, " +
+                        "substituindo a que se situava no átrio do palácio.\n" +
+                        "O meio de transporte presente é um carro de cavalos britânico do século " +
+                        "XIX.\n\n",
                 new int[] {}, R.raw.sound_sample));
-        rooms.add(new MRoom(9,"Cozinha", "Inserir descrição",
+        rooms.add(new MRoom(9,"Cozinha",
+                "Na época setecentista, este terá sido um espaço vivo com numerosa " +
+                        "criadagem, distribuída em diferentes funções.\n" +
+                        "Os produtos então utilizados na alimentação eram carne, com grande " +
+                        "presença de caça, o peixe- este com especial incidência nos períodos " +
+                        "de jejum religioso- os ovos, o pão, o leite, os legumes, o açúcar, " +
+                        "a farinha e a fruta.\n" +
+                        "Muitos dos doces que integram a atual gastronomia português (XXI), " +
+                        "forma inventados nas cozinhas dos mosteiros e conventos barrocos dos" +
+                        " quais se referem, a título de exemplo, papos de anjo, beijos e " +
+                        "barrigas de freira, toucinho-do-céu e manjar celeste.\n\n",
                 new int[] {}, R.raw.sound_sample));
-        rooms.add(new MRoom(10,"Jardins", "Inserir descrição",
+        rooms.add(new MRoom(10,"Jardins",
+                "Os jardins barrocos do Museu dos Biscainhos são um dos mais " +
+                        "importantes de Portugal. Estão organizados em três patamares: o " +
+                        "Terreiro e o Jardim Formal; o Pomar e a Horta, sendo rematados, " +
+                        "no limite Oeste, por muralhas sugerindo um baluarte seiscentista. " +
+                        "Ao longo do jardim encontram-se fontes e esculturas em granito do " +
+                        "período do barroco e rococó.\n" +
+                        "O Terreiro foi um espaço de intenso movimento de lacaios, cavalos " +
+                        "e de carruagens, um chafariz com taça de formato oval.\n" +
+                        "O Jardim Formal apresenta um labirinto geométrico, duas casas de " +
+                        "fresco formadas por japoneiras e um pavilhão de jardim.\n" +
+                        "O Pomar tem uma árvore secular com cerca de duzentos e cinquenta " +
+                        "anos, um Tulipeiro da Virgínia. Na época, era considerada como uma " +
+                        "planta exótica apreciada pela nobreza. Na Horta cultivavam-se " +
+                        "legumes e plantas medicinais.\n\n",
                 new int[] {}, R.raw.sound_sample));
     }
 

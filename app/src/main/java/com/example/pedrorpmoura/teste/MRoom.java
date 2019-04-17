@@ -1,9 +1,5 @@
 package com.example.pedrorpmoura.teste;
 
-//import android.support.v7.app.AppCompatActivity;
-
-//import java.util.ArrayList;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +62,9 @@ public class MRoom {
         this.room_pics = room_pics;
     }
 
-    public void setSound(int sound) {this.sound = sound;}
+    public void setSound(int sound) {
+        this.sound = sound;
+    }
 
     public void setRoom_objects(List<MObject> room_objects) {
         this.room_objects = room_objects;
