@@ -24,7 +24,7 @@ public class RoomTabsAdapter extends FragmentStatePagerAdapter {
                 desc_frag.setDescription(this.room.getDescription());
                 return desc_frag;
             case 1:
-                return new DescriptionFragment();
+                return new ObjectsPicsFragment();
             default:
                 desc_frag = new DescriptionFragment();
                 desc_frag.setDescription(this.room.getDescription());
