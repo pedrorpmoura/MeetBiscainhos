@@ -2,7 +2,9 @@ package com.example.pedrorpmoura.teste;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         mDrawerLayout.closeDrawers();
                         createFragment(new QuizFragment(), "Quiz");
+                        break;
                 }
 
                 return true;

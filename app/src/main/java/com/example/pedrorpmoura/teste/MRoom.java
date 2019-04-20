@@ -14,12 +14,13 @@ public class MRoom {
 
 
     public MRoom(int ala, String name, String description,
-                 int[] room_pics, int sound) {
+                 int[] room_pics, int sound, List<MObject> room_objects) {
         this.ala = ala;
         this.name = name;
         this.description = description;
         this.room_pics = room_pics;
         this.sound = sound;
+        this.room_objects = room_objects;
     }
 
     public int getAla() {
@@ -67,6 +68,19 @@ public class MRoom {
     }
 
     public void setRoom_objects(List<MObject> room_objects) {
+
         this.room_objects = room_objects;
+    }
+
+
+    public int[] getObj_pics() {
+        int[] obj_pics = new int[this.room_objects.size()];
+
+        int i = 0;
+        for(MObject obj : this.room_objects) {
+            obj_pics[i++] = obj.getPic();
+        }
+
+        return obj_pics;
     }
 }

@@ -30,7 +30,9 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View root_view = inflater.inflate(R.layout.fragment_home, container, false);
-        int carousel[] = {R.drawable.oratorio1, R.drawable.oratorio2, R.drawable.oratorio3};
+        int carousel[] = {R.drawable.room_oratorio1,
+                R.drawable.room_oratorio2,
+                R.drawable.room_oratorio3};
         v_flipper = (ViewFlipper) root_view.findViewById(R.id.v_flipper);
 
         for(int image: carousel){

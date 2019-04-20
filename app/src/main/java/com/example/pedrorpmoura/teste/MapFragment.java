@@ -51,8 +51,8 @@ public class MapFragment extends Fragment implements View.OnTouchListener {
             public void onClick(View v) {
                 String currentText = piso.getText().toString();
                 if(currentText.equals("2º Piso")){
-                    iv.setImageResource(R.drawable.oratorio1);       //mudar isto
-                    iv2.setImageResource(R.drawable.oratorio1);      //mudar isto
+                    iv.setImageResource(R.drawable.room_oratorio1);       //mudar isto
+                    iv2.setImageResource(R.drawable.room_oratorio2);      //mudar isto
                     piso.setText("1º Piso");
                 }else{
                     iv.setImageResource(R.drawable.original2);
