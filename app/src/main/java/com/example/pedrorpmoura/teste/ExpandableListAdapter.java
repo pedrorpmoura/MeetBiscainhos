@@ -3,6 +3,7 @@ package com.example.pedrorpmoura.teste;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -98,7 +99,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             {
                 indicator.setVisibility(View.VISIBLE);
                 indicator.setImageResource(
-                        isExpanded ? R.drawable.expander_ic_maximized : R.drawable.expander_ic_minimized);
+                        isExpanded ?
+                                R.drawable.baseline_expand_more_black_18dp :
+                                R.drawable.baseline_expand_less_black_18dp);
+                indicator.setColorFilter(ContextCompat.getColor(
+                        mContext, R.color.colorDefault));
             }
         }
 

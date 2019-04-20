@@ -100,11 +100,17 @@ public class ObjectFragment extends DialogFragment {
         super.onResume();
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        int height = displaymetrics.heightPixels;
-        int width = displaymetrics.widthPixels;
         ViewGroup.LayoutParams params = getDialog().getWindow().getAttributes();
-        params.height = height - 200;
-        params.width = width - 200;
+
+        params.height = LinearLayout.LayoutParams.MATCH_PARENT;
+        params.width = LinearLayout.LayoutParams.MATCH_PARENT;
+
+        // other option
+        //int height = displaymetrics.heightPixels;
+        //int width = displaymetrics.widthPixels;
+        //params.height = height - 200;
+        //params.width = width - 200;
+
 
         getDialog().getWindow().setAttributes((WindowManager.LayoutParams) params);
     }
