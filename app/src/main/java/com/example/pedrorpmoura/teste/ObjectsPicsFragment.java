@@ -42,8 +42,9 @@ public class ObjectsPicsFragment extends Fragment {
         for(final MObject obj : this.room_objects) {
             ImageView image_view = new ImageView(getActivity());
             image_view.setImageResource(obj.getPic());
+            image_view.setMaxHeight(500);
             image_view.setAdjustViewBounds(true);
-            image_view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            image_view.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
             image_view.setOnClickListener(new View.OnClickListener() {
                 @Override

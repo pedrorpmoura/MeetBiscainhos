@@ -1,15 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".QuizFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Quiz Fragment"
-        android:gravity="center"/>
+        android:id="@+id/questionCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#000000"
+        android:text="Questão 1"
+        android:textSize="22sp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/questionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textColor="#000000"
+        android:text="Questão"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/questionAnswer1"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="resposta 1"
+        android:layout_marginTop="35dp"/>
+
+    <Button
+        android:id="@+id/questionAnswer2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="resposta 2"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/questionAnswer3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="resposta 3"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/questionAnswer4"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="resposta 4"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
