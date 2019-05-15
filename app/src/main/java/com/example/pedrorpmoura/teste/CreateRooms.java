@@ -157,6 +157,139 @@ public class CreateRooms {
                 R.drawable.obj_cavalarica_coche
         );
 
+        final MObject obj_sala_musica_piano = new MObject(
+                "Piano",
+                "________",
+                "________",
+                "Altura de 84,cm, " +
+                        "profundidade 55cm e " +
+                        "comprimento de 153,7cm",
+                "O piano está apoiado em seis pernas aneladas " +
+                        "e gomadas, rematadas inferiormente por rodízios e " +
+                        "com aros metálicos na parte superior. \n" +
+                        "Apresenta dois painéis de madeira com quadrifólios " +
+                        "vazados que decoram o alçado entre as teclas e a " +
+                        "estante para colocação de pautas. No interior, " +
+                        "junto às cordas, alude um painel de motivos " +
+                        "vegetalistas recortados. \n",
+                R.drawable.piano_min
+        );
+
+        final MObject obj_sala_musica_pote = new MObject(
+                "Pote de Chocolate",
+                "XVIII d.C. - Dinastia Qing, reinado Qianlong",
+                "________",
+                "Com uma altura de 22,3cm e diâmetro 20,6cm",
+                "O Pote circular de parede direita, com tampa " +
+                        "de encaixe rematada por pega concavada, adapta-se " +
+                        "em pequeno pé, em porcelana branca revestida de " +
+                        "vidrado castanho e conhecida como porcelana " +
+                        "\"chocolate\", Batávia ou \"café-au-lait\", " +
+                        "decorada com esmaltes da \"família rosa\" nas " +
+                        "cores rosa, verde, azul, amarelo, preto, branco " +
+                        "e vermelho coral sobre o vidrado. ",
+                R.drawable.pote_min
+        );
+
+        final MObject obj_sala_musica_mesa = new MObject(
+                "Mesa de Jogo",
+                "XVIII d.C",
+                "Pau-santo e embutidos de outras madeiras",
+                "Altura de 176cm, profundidade 41 cm e comprimento 88cm",
+                "Mesa de jogo, de encostar, em pau-santo decorada com embutidos. " +
+                        "Aro retangular saliente, com cantos anteriores em semicírculo, " +
+                        "estabelecendo continuidade com o tampo, quando fechado. Na face" +
+                        " anterior, uma gaveta central retangular com puxador metálico " +
+                        "redondo. Tampo retangular com cantos arredondados, desdobrável," +
+                        " que sobrepõe duas abas, fixas por dobradiças metálicas. ",
+                R.drawable.mesa_min
+        );
+
+        final MObject obj_gabinete_tinteiro = new MObject(
+                "Tinteiro",
+                "XVIII d.C. ",
+                "________",
+                "Altura de 6cm e diâmetro de 17,7cm",
+                "o Tinteiro tem um formato circular com doze gomos radiantes, " +
+                        "com depósito circular central ladeado por seis cavidades " +
+                        "destinadas às penas, em faiança branca pintada a azul e vinoso. \n" +
+                        "Assenta em três pés esféricos. A sua decoração é pintada com " +
+                        "filetes, tarjas e manchas. \n",
+                R.drawable.tinteiro_min
+        );
+
+        final MObject obj_gabinete_frasco = new MObject(
+                "Frasco",
+                "XVIII d.C.",
+                "Vidro pintado",
+                "Altura de 18cm, diâmetro 8cm e superior 6,5cm",
+                "Frasco octogonal em vidro transparente com decoração pintada " +
+                        "a vermelho, amarelo, azul e branco. Numa das faces, o " +
+                        "brasão-de-armas de D. João V. Nas faces menores, tem " +
+                        "ornamentação vegetal. Apresenta tampa circular metálica, " +
+                        "de rosca.",
+                R.drawable.frasco_min
+        );
+
+        final MObject obj_gabinete_pote_tabaco = new MObject(
+                "Pote de Tabaco",
+                "________",
+                "Faiança com decoração policroma",
+                "Altura de 21,5cm, largura 14cm e comprimento: 18,5cm",
+                "Pote para tabaco, configurando uma cabeça de preto, com base " +
+                        "circular e asa na parte posterior, em faiança com decoração " +
+                        "policroma. Tem o rosto negro e lábios vermelhos. O pescoço " +
+                        "está \"vestido\" de verde. A cabeça é coberta por um lenço " +
+                        "pontilhado a amarelo, apanhado na nuca e formando simultaneamente a asa.",
+                R.drawable.tabaco_min
+        );
+
+        final MObject obj_sala_jantar_travessa = new MObject(
+                "Travessa",
+                "XVIII d.C. ",
+                "________",
+                "Altura de 3,8 com largura de 27,5 e comprimento 36,5",
+                "A travessa apresenta um fundo ovalado e aba oitavada e " +
+                        "modelada, em porcelana branca decorada com esmaltes da " +
+                        "\"família rosa\" nas cores azul sob o vidrado e rosa, " +
+                        "verde, vermelho coral, branco, cinzento e ouro sobre o " +
+                        "vidrado. \n" +
+                        "No centro, o brasão de armas do 1º Visconde de Mirandela, " +
+                        "Francisco António da Veiga Cabral da Câmara Pimentel. \n",
+                R.drawable.travessa_min
+        );
+
+        final MObject obj_sala_jantar_canape = new MObject(
+                "Canapé",
+                "1775 d.C. - 1825 d.C.",
+                "Madeiras de pau-santo, palhinha.",
+                "Altura de 98cm com largura 167,5 cm e  profundidade 18,6 cm",
+                "O Canapé retangular neoclássico, com estrutura de madeira, " +
+                        "assento empalhado e costas constituídas por quatro espaldares " +
+                        "ovais com tabelas entalhadas e vazadas, interligadas " +
+                        "superiormente por três segmentos ondulados dispostos em " +
+                        "arco. Braços e respetivos apoios verticais ligeiramente " +
+                        "encurvados. Cinco pernas anteriores retas molduradas, com " +
+                        "ornatos vegetalistas, e cinco pernas posteriores simétricas.",
+                R.drawable.canape_min
+        );
+
+        final MObject obj_sala_jantar_estojo = new MObject(
+                "Estojo de Faqueiro",
+                "XVIII d.C.",
+                "Estrutura de madeira; interior a veludo; pés de metal e ferragens, " +
+                        "dourados.",
+                "Com uma altura de 34,5cm, largura 22,6cm e profundidade 21,7cm",
+                "Estojo de faqueiro estruturado em madeira. Topo estreito, tampa " +
+                        "inclinada integrando pega torneada, com bordo recortado acompanhando " +
+                        "o desenho da caixa. Assenta em quatro pés circulares de metal. " +
+                        "As pegas, dobradas em arco com anel ao meio, têm espelhos " +
+                        "metálicos idênticos, recortados e decorados com motivos " +
+                        "incisos. É forrado a veludo vermelho com um galão de seda " +
+                        "creme aplicado em contornos.",
+                R.drawable.estojo_min
+        );
+
 
         rooms.add(new MRoom(1,"Sala de Entrada",
                 "A Sala de Entrada " +
@@ -219,7 +352,11 @@ public class CreateRooms {
                         "frequentes.\n\n",
                 new int[] {},
                 R.raw.sound_sample,
-                new ArrayList<MObject>() {}));
+                new ArrayList<MObject>() {{
+                    add(obj_sala_musica_mesa);
+                    add(obj_sala_musica_piano);
+                    add(obj_sala_musica_pote);
+                }}));
 
         rooms.add(new MRoom(6,"Gabinete",
                 "Nos séculos XVII e XVIII, ainda proliferavam os “Gabinetes de " +
@@ -236,7 +373,11 @@ public class CreateRooms {
                         "revestimento parietal azulejar.\n\n",
                 new int[] {},
                 R.raw.sound_sample,
-                new ArrayList<MObject>() {}));
+                new ArrayList<MObject>() {{
+                    add(obj_gabinete_frasco);
+                    add(obj_gabinete_pote_tabaco);
+                    add(obj_gabinete_tinteiro);
+                }}));
 
         rooms.add(new MRoom(7,"Sala de Jantar",
                 "A Sala de Jantar como espaço fixo para tomar as refeições " +
@@ -253,7 +394,11 @@ public class CreateRooms {
                         "habitualmente trajando ricas librés (fardas).\n\n",
                 new int[] {},
                 R.raw.sound_sample,
-                new ArrayList<MObject>() {}));
+                new ArrayList<MObject>() {{
+                    add(obj_sala_jantar_canape);
+                    add(obj_sala_jantar_estojo);
+                    add(obj_sala_jantar_travessa);
+                }}));
 
         rooms.add(new MRoom(8,"Cavalariças",
                 "Em Portugal a equitação foi tradicionalmente apreciada ao nível " +
