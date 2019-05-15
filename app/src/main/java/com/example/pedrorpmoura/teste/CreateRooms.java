@@ -43,7 +43,7 @@ public class CreateRooms {
                 "Teto",
                 "século XIX d.C.",
                 "Madeira, Óleo e Talha Dourada",
-                "",
+                "________",
                 "O teto abobadado em madeira de castanho " +
                         "é revestido por uma pintura ornamental a óleo. " +
                         "Trata-se de um teto comemorativo e de homenagem " +
@@ -65,7 +65,7 @@ public class CreateRooms {
                 "Painel de Azulejo",
                 "século XIX d.C.",
                 "Painéis de Azulejo Azul e Branco",
-                "",
+                "________",
                 "O painel de azulejo é constituído por pinturas" +
                         " de momentos galantes em jardins e paisagens, " +
                         "cenas de montaria e de caça, referenciadores da " +
@@ -109,7 +109,7 @@ public class CreateRooms {
 
         final MObject obj_cozinha_almofariz = new MObject(
                 "Almofariz",
-                "",
+                "________",
                 "Bronze",
                 "altura de 11,5 cm",
                 "O almofariz em bronze é um objeto cilíndrico, " +
@@ -123,9 +123,9 @@ public class CreateRooms {
 
         final MObject obj_cavalarica_arreios = new MObject(
                 "Arreios",
-                "",
-                "",
-                "",
+                "________",
+                "________",
+                "________",
                 "O conjunto de arreios para cavalos é " +
                         "constituído por couro e alguns elementos " +
                         "metálicos. Tem ainda uma peça semelhante a " +
