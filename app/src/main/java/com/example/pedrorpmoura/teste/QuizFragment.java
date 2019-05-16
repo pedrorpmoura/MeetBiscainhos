@@ -198,6 +198,7 @@ public class QuizFragment extends Fragment {
                 }
             }
         });
+
         builder.setCancelable(false);
         AlertDialog alert2 = builder.create();
         alert2.show();
