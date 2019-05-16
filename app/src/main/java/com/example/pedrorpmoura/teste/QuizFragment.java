@@ -182,7 +182,7 @@ public class QuizFragment extends Fragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(alert);
-        if(quizCounter == QUIZ_COUNT) builder.setMessage("Resultado final: " +score + "/4");
+        if(quizCounter == QUIZ_COUNT) builder.setMessage("Resultado final: " +score + "/" + QUIZ_COUNT);
 
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
