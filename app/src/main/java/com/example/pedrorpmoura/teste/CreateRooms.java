@@ -12,7 +12,7 @@ public class CreateRooms {
     public CreateRooms() {
 
         // create objects
-        final MObject obj_entrada1 = new MObject(
+        final MObject obj_entrada_cadeirinha = new MObject(
                 "Cadeirinha",
                 "século XVIII d.C.",
                 "Madeira entalhada e dourada; " +
@@ -37,6 +37,60 @@ public class CreateRooms {
                         "assento, sendo o restante revestido a algodão" +
                         " riscado a castanho e creme e ornado com galão.",
                 R.drawable.obj_entrada_cadeirinha
+        );
+
+        final MObject obj_entrada_pote1 = new MObject(
+                "Pote",
+                "XVIII d.C. - Dinastia Qing",
+                "________",
+                "altura: 23,8; diâmetro: 20;",
+                "Pote oviforme com o colo cilíndrico, em porcelana branca revestida com esmalte azul e decorada com esmaltes da \"família rosa\" nas cores azul, amarelo, verde, rosa, vermelho coral.  Sobre o vidrado observa-se o dourado com uma tampa circular de madeira pintada. A superfície está totalmente decorada com borboletas e flores soltas sobre fundo azul.",
+                R.drawable.pote1_entrada
+        );
+
+        final MObject obj_entrada_pote2 = new MObject(
+                "Pote",
+                "XVI d.C. - Dianstia Ming",
+                "________",
+                "altura: 28; diâmetro: boca: 11,2;",
+                "Pote bojudo, de colo curto e cilíndrico rematando com rebordo, em faiança branca decorada com esmalte azul sob o vidrado. O bojo apresenta grous e nuvens em alternância dispostos em dois registos horizontais, sobre cristas de ondas. Os ombros são moldurados por tarja formada por painéis de lótus. O colo, delimitado por filetes duplos, é guarnecido com dois conjuntos de cabeças de \"ruyi\" entrelaçando dois cornos de rinoceronte - um dos \"oito objectos preciosos\". A base é percorrida por duplo filete.",
+                R.drawable.pote2_entrada
+        );
+
+        final MObject obj_oratorio_movel = new MObject(
+                "Móvel Oratório",
+                "1701 d.C. - 1750 d.C.",
+                "Madeira de casquinha com pintura acharoada.",
+                "altura: 249; largura: 145,8; profundidade: 65,3;",
+                "Móvel de oratório de forma retangular constituído por duas partes sobrepostas. A parte superior moldurada, com remate curvo, e duas portas com pintura exterior imita um diferente tipo de madeira. No seu interior, contém disposição de oratório, moldurado com friso verde, vermelho e dourado com volutas relevadas douradas. Contém um trono de dois níveis emoldurados a vermelho e dourado. O nível superior apresenta uma decoração de motivos entrelaçados dourados sobre um fundo verde. O nível inferior apresenta uma decoração pintada de inspiração oriental com aves, insetos, casas, folhagens, flores, figuras humanas, alternando com círculos a vermelho e dourado com botão dourado ao centro. No fundo e no teto do oratório pintado em tonalidades de azul e cinzentos, com resplendor e pomba dourada (Espírito Santo) a dourado.  As laterais e o verso das portas pintados a vermelho com aves e folhagens douradas, emoldurando quatro pares de pinturas de formato retangular representando vasos-urnas de diferentes flores no género de naturezas-mortas barrocas. A parte inferior possui duas portas almofadadas com pintura exterior imitando um diferente tipo de madeira. Inclui puxadores em pingente e espelhos de fechadura recortados com ornamentação incisa de flores, pérolas e folhagem. Entre os constituentes, uma prateleira móvel pintada de azul com dois puxadores metálicos.",
+                R.drawable.oratorio_movel
+        );
+
+        final MObject obj_estrado_contador = new MObject(
+                "Contador de estrado",
+                "XVII d.C.",
+                "Teca, sissó, marfim e outra madeira.",
+                "altura: 17,9; largura: 24,8; profundidade: 18,4;",
+                "Contador de estrado, ou de mesa, indo-português, de formato retangular, assente em quatro pés de bolacha, com três gavetas na face anterior. É decorado com ponteados embutidos com tachas metálicas, de diferentes madeiras e marfim, compondo, em contraste, motivos fitomórficos (albarrada com flores de lótus). As gavetas (duas superiores e uma inferior simulando duas) têm fechadura com orifício contornado a marfim. AS ihargas, com bordaduras de quadrifólios, enquadram, ao centro, gualdras em metal, para movimentação do objecto.",
+                R.drawable.estrado_contador
+        );
+
+        final MObject obj_estrado_vasilha = new MObject(
+                "Vasilha",
+                "XVII d.C.",
+                "________",
+                "altura: 41,5; diâmetro: base 14,5; bojo 92,5;",
+                "Vasilha periforme com anel recolado junto à boca e três pares de asas laterais, assente em pé circular, em faiança com decoração a azul sobre fundo branco. O bojo é preenchido por composição de flores com ramagens, separada de duas tarjas horizontais por filetes. A tarja superior apresenta elementos florais com folhagem e a inferior alterna dois motivos de \"aranhão\" contidos em seis reservas.",
+                R.drawable.estrado_vasilha
+        );
+
+        final MObject obj_estrado_taca = new MObject(
+                "Taça",
+                "XV d.C. - XVII d.C. - Dinastia Ming.",
+                "________",
+                "altura: 11; diâmetro: bojo: 22,5;",
+                "Taça de parede arredondada com bordo projectado para o exterior, assente em pequeno pé, em porcelana branca decorada com esmalte na cor azul sob o vidrado. Tem marca a azul inscrita em duplo círculo no frete. No interior, no fundo, delimitado por círculos concêntricos, peónia com folhagem. No bordo, festão ondulante rematado por filetes. No exterior a composição é formada por motivo de peónia e borboleta, que se repete. Na parte inferior, filete recortado e pontilhado.",
+                R.drawable.estrado_taca
         );
 
         final MObject obj_salao_nobre_teto = new MObject(
@@ -306,7 +360,9 @@ public class CreateRooms {
                 },
                 R.raw.sala_de_entrada ,
                 new ArrayList<MObject>() {{
-                    add(obj_entrada1);
+                    add(obj_entrada_cadeirinha);
+                    add(obj_entrada_pote1);
+                    add(obj_entrada_pote2);
                 }}));
 
         rooms.add(new MRoom(2,"Salão Nobre",
@@ -334,8 +390,10 @@ public class CreateRooms {
                         R.drawable.room_oratorio2,
                         R.drawable.room_oratorio3,
                         R.drawable.room_oratorio4},
-                R.raw.sound_sample,
-                new ArrayList<MObject>() {}));
+                R.raw.oratorio,
+                new ArrayList<MObject>() {{
+                    add(obj_oratorio_movel);
+                }}));
 
         rooms.add(new MRoom(4,"Sala do Estrado",
                 "A Sala do Estrado representa um hábito que se instalou em " +
@@ -345,8 +403,12 @@ public class CreateRooms {
                         " passarem o dia sentadas de pernas cruzadas no chão ou em estrados," +
                         " a fiar, a bordar e a conversar.\n\n",
                 new int[] {R.drawable.room_estrado1},
-                R.raw.oratorio,
-                new ArrayList<MObject>() {}));
+                R.raw.sala_do_estrado,
+                new ArrayList<MObject>() {{
+                    add(obj_estrado_contador);
+                    add(obj_estrado_taca);
+                    add(obj_estrado_vasilha);
+                }}));
 
         rooms.add(new MRoom(5,"Salão de Música e do Jogo",
                 "O Salão de Música e de Jogo destinava-se a reuniões da nobreza " +
