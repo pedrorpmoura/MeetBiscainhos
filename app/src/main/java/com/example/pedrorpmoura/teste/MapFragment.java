@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -25,6 +28,12 @@ public class MapFragment extends Fragment implements View.OnTouchListener {
     private FragmentTransaction mFragmentTransaction;
 
     private List<MRoom> rooms = new CreateRooms().getRooms();
+
+    private Button piso;
+
+    private Button visitarSala;
+
+    private TextView currentRoom;
 
     public MapFragment() {
         // Required empty public constructor
@@ -40,23 +49,41 @@ public class MapFragment extends Fragment implements View.OnTouchListener {
         final ImageView iv = (ImageView) root_view.findViewById (R.id.image);
         final ImageView iv2 = (ImageView) root_view.findViewById (R.id.image_areas);
 
+        currentRoom = (TextView) root_view.findViewById (R.id.curentRoom);
+
+        visitarSala = (Button) root_view.findViewById (R.id.visitarSala);
+
+        visitarSala.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RoomFragment room_fragment = new RoomFragment();
+                for(MRoom r : rooms) {
+                    if(r.getName().equals(currentRoom.getText().toString())) {
+                        room_fragment.setRoom(r);
+                        createFragment(room_fragment, r.getName());
+                        break;
+                    }
+                }
+            }
+        });
+
         if (iv != null) {
             iv.setOnTouchListener (this);
         }
 
-        final Button piso = (Button) root_view.findViewById(R.id.piso);
+        piso = (Button) root_view.findViewById(R.id.piso);
 
         piso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String currentText = piso.getText().toString();
                 if(currentText.equals("2º Piso")){
-                    iv.setImageResource(R.drawable.room_oratorio1);       //mudar isto
-                    iv2.setImageResource(R.drawable.room_oratorio2);      //mudar isto
+                    iv.setImageResource(R.drawable.piso2);
+                    iv2.setImageResource(R.drawable.piso2_picker);      //mudar isto
                     piso.setText("1º Piso");
                 }else{
-                    iv.setImageResource(R.drawable.original2);
-                    iv2.setImageResource(R.drawable.colored2);
+                    iv.setImageResource(R.drawable.piso1);
+                    iv2.setImageResource(R.drawable.piso1_picker);
                     piso.setText("2º Piso");
                 }
 
@@ -96,50 +123,99 @@ public class MapFragment extends Fragment implements View.OnTouchListener {
 
                 ColorTool ct = new ColorTool ();
                 int tolerance = 25;
+                String pisoAtual = piso.getText().toString();
 
                 if (ct.closeMatch (Color.RED, touchColor, tolerance)){
-                    RoomFragment room_fragment = new RoomFragment();
-                    for(MRoom r : rooms) {
-                        if(r.getName().equals("Sala de Entrada")) {
-                            room_fragment.setRoom(r);
-                            createFragment(room_fragment, r.getName());
-                            break;
-                        }
+                    if(pisoAtual.equals("2º Piso")) {
+                        currentRoom.setText("Sala de Entrada");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.VISIBLE);
+                    }else{
+                        currentRoom.setText("Salão Nobre");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.VISIBLE);
                     }
                 }
 
                 else if (ct.closeMatch (Color.MAGENTA, touchColor, tolerance)){
-                    RoomFragment room_fragment = new RoomFragment();
-                    for(MRoom r : rooms) {
-                        if(r.getName().equals("Cozinha")) {
-                            room_fragment.setRoom(r);
-                            createFragment(room_fragment, r.getName());
-                            break;
-                        }
-                    }
+                    currentRoom.setText("Cozinha");
+                    currentRoom.setVisibility(View.VISIBLE);
+                    visitarSala.setVisibility(View.VISIBLE);
+
                 }
 
                 else if (ct.closeMatch (Color.YELLOW, touchColor, tolerance)){
-                    RoomFragment room_fragment = new RoomFragment();
-                    for(MRoom r : rooms) {
-                        if(r.getName().equals("Cavalariças")) {
-                            room_fragment.setRoom(r);
-                            createFragment(room_fragment, r.getName());
-                            break;
-                        }
+
+                    if(pisoAtual.equals("2º Piso")) {
+                        currentRoom.setText("Cavalariças");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.VISIBLE);
+                    }else{
+                        currentRoom.setText("Sala de Jantar");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.VISIBLE);
                     }
+
                 }
 
                 else if (ct.closeMatch (Color.GREEN, touchColor, tolerance)){
-                    RoomFragment room_fragment = new RoomFragment();
-                    for(MRoom r : rooms) {
-                        if(r.getName().equals("Jardins")) {
-                            room_fragment.setRoom(r);
-                            createFragment(room_fragment, r.getName());
-                            break;
-                        }
+                    currentRoom.setText("Jardins");
+                    currentRoom.setVisibility(View.VISIBLE);
+                    visitarSala.setVisibility(View.VISIBLE);
+
+                }
+
+                else if (ct.closeMatch (Color.DKGRAY, touchColor, tolerance)){
+                    currentRoom.setText("Escadaria");
+                    currentRoom.setVisibility(View.VISIBLE);
+                    visitarSala.setVisibility(View.INVISIBLE);
+                }
+
+                else if (ct.closeMatch (Color.CYAN, touchColor, tolerance)){
+
+                    if(pisoAtual.equals("2º Piso")) {
+                        currentRoom.setText("Casas de Banho");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.INVISIBLE);
+                    }else{
+                        currentRoom.setText("Salão de Música e do Jogo");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.VISIBLE);
                     }
                 }
+
+                else if (ct.closeMatch (Color.BLUE, touchColor, tolerance)){
+
+                    if(pisoAtual.equals("2º Piso")) {
+                        currentRoom.setText("Receção");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.INVISIBLE);
+                    }else{
+                        currentRoom.setText("Sala de Entrada");
+                        currentRoom.setVisibility(View.VISIBLE);
+                        visitarSala.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                else if (ct.closeMatch (getResources().getColor(R.color.teal), touchColor, tolerance)){
+                    currentRoom.setText("Oratório");
+                    currentRoom.setVisibility(View.VISIBLE);
+                    visitarSala.setVisibility(View.VISIBLE);
+                }
+
+                else if (ct.closeMatch (getResources().getColor(R.color.navy), touchColor, tolerance)){
+                    currentRoom.setText("Gabinete");
+                    currentRoom.setVisibility(View.VISIBLE);
+                    visitarSala.setVisibility(View.VISIBLE);
+                }
+
+                else if (ct.closeMatch (getResources().getColor(R.color.purple), touchColor, tolerance)){
+                    currentRoom.setText("Sala do Estrado");
+                    currentRoom.setVisibility(View.VISIBLE);
+                    visitarSala.setVisibility(View.VISIBLE);
+                }
+
+
 
                 v.performClick();
 

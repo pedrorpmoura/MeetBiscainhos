@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#26000a</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorDefault">#808080</color>
+    <color name="teal">#008080</color>
+    <color name="purple">#800080</color>
+    <color name="navy">#000080</color>
 </resources>
