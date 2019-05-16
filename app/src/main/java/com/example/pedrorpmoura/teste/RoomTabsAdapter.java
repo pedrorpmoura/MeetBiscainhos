@@ -24,8 +24,11 @@ public class RoomTabsAdapter extends FragmentStatePagerAdapter {
                 desc_frag.setDescription(this.room.getDescription());
                 return desc_frag;
             case 1:
-                ObjectsPicsFragment obj_pics_frag = new ObjectsPicsFragment();
-                obj_pics_frag.setObjects_pics(this.room.getRoom_objects());
+                //ObjectsPicsFragment obj_pics_frag = new ObjectsPicsFragment();
+                //obj_pics_frag.setObjects_pics(this.room.getRoom_objects());
+
+                ObjectsPicsFragment2 obj_pics_frag = new ObjectsPicsFragment2();
+                obj_pics_frag.setRoom_objects(this.room.getRoom_objects());
                 return obj_pics_frag;
             default:
                 desc_frag = new DescriptionFragment();

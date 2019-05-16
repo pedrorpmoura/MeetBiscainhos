@@ -304,7 +304,7 @@ public class CreateRooms {
                         R.drawable.room_entrada1,
                         R.drawable.room_entrada2
                 },
-                R.raw.sound_sample,
+                R.raw.sala_de_entrada ,
                 new ArrayList<MObject>() {{
                     add(obj_entrada1);
                 }}));
@@ -317,7 +317,7 @@ public class CreateRooms {
                         "ocasiões de maior cerimónia.\n\n",
                 new int[] {R.drawable.room_salao1,
                         R.drawable.room_salao2},
-                R.raw.sound_sample,
+                R.raw.salao_nobre,
                 new ArrayList<MObject>() {{
                     add(obj_salao_nobre_teto);
                     add(obj_salao_nobre_azulejos);
@@ -345,7 +345,7 @@ public class CreateRooms {
                         " passarem o dia sentadas de pernas cruzadas no chão ou em estrados," +
                         " a fiar, a bordar e a conversar.\n\n",
                 new int[] {R.drawable.room_estrado1},
-                R.raw.sound_sample,
+                R.raw.oratorio,
                 new ArrayList<MObject>() {}));
 
         rooms.add(new MRoom(5,"Salão de Música e do Jogo",
@@ -355,7 +355,7 @@ public class CreateRooms {
                 new int[] {R.drawable.room_jogo1,
                         R.drawable.room_jogo2,
                         R.drawable.room_jogo3},
-                R.raw.sound_sample,
+                R.raw.salao_musica,
                 new ArrayList<MObject>() {{
                     add(obj_sala_musica_mesa);
                     add(obj_sala_musica_piano);
@@ -378,7 +378,7 @@ public class CreateRooms {
                 new int[] {R.drawable.room_gabinete1,
                         R.drawable.room_gabinete2,
                         R.drawable.room_gabinete3},
-                R.raw.sound_sample,
+                R.raw.gabinete,
                 new ArrayList<MObject>() {{
                     add(obj_gabinete_frasco);
                     add(obj_gabinete_pote_tabaco);
@@ -400,7 +400,7 @@ public class CreateRooms {
                         "habitualmente trajando ricas librés (fardas).\n\n",
                 new int[] {R.drawable.room_jantar1,
                         R.drawable.room_jantar2},
-                R.raw.sound_sample,
+                R.raw.sala_de_jantar,
                 new ArrayList<MObject>() {{
                     add(obj_sala_jantar_canape);
                     add(obj_sala_jantar_estojo);
@@ -422,7 +422,7 @@ public class CreateRooms {
                 new int[] {R.drawable.room_cavalaricas1,
                         R.drawable.room_cavalaricas2,
                         R.drawable.room_cavalaricas3},
-                R.raw.sound_sample,
+                R.raw.cavalarica,
                 new ArrayList<MObject>() {{
                     add(obj_cavalarica_arreios);
                     add(obj_cavalarica_coche);
@@ -442,7 +442,7 @@ public class CreateRooms {
                 new int[] {R.drawable.room_cozinha1,
                         R.drawable.room_cozinha2,
                         R.drawable.room_cozinha3},
-                R.raw.sound_sample,
+                R.raw.cozinha,
                 new ArrayList<MObject>() {{
                     add(obj_cozinha_roda);
                     add(obj_cozinha_escano);
@@ -467,7 +467,7 @@ public class CreateRooms {
                 new int[] {R.drawable.room_jardins1,
                         R.drawable.room_jardins2,
                         R.drawable.room_jardins3},
-                R.raw.sound_sample,
+                R.raw.jardins,
                 new ArrayList<MObject>() {}));
     }
 
