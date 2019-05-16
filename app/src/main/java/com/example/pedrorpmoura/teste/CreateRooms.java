@@ -168,7 +168,8 @@ public class CreateRooms {
                 "de expressão neoclássica frequentemente observadas nos interiores abastados " +
                 "a partir do século XVII.\n\n",
                 new int[] {
-                        R.drawable.room_entrada1
+                        R.drawable.room_entrada1,
+                        R.drawable.room_entrada2
                 },
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {{
@@ -181,7 +182,8 @@ public class CreateRooms {
                         "notável exemplar de interior civil do século XVIII. O espaço com " +
                         "toda a sua estética de pompa, esplendor e festa destinava-se às " +
                         "ocasiões de maior cerimónia.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_salao1,
+                        R.drawable.room_salao2},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {{
                     add(obj_salao_nobre_teto);
@@ -209,7 +211,7 @@ public class CreateRooms {
                         "como todo o grupo feminino, filhas, familiares, criadas e escravas," +
                         " passarem o dia sentadas de pernas cruzadas no chão ou em estrados," +
                         " a fiar, a bordar e a conversar.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_estrado1},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {}));
 
@@ -217,7 +219,9 @@ public class CreateRooms {
                 "O Salão de Música e de Jogo destinava-se a reuniões da nobreza " +
                         "durante as quais a música (cantada e/ou tocada) e o jogo eram " +
                         "frequentes.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_jogo1,
+                        R.drawable.room_jogo2,
+                        R.drawable.room_jogo3},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {}));
 
@@ -234,7 +238,9 @@ public class CreateRooms {
                         "a família. Espaço de características Neoclássicas, pois apresenta " +
                         "um teto ornamental de estuques relevados pintura central e um " +
                         "revestimento parietal azulejar.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_gabinete1,
+                        R.drawable.room_gabinete2,
+                        R.drawable.room_gabinete3},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {}));
 
@@ -251,7 +257,8 @@ public class CreateRooms {
                         " e os alimentos em abundância. Todas as refeições eram geralmente " +
                         "servidas por lacaios ou escravos, em grande número nestas casas, " +
                         "habitualmente trajando ricas librés (fardas).\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_jantar1,
+                        R.drawable.room_jantar2},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {}));
 
@@ -267,7 +274,9 @@ public class CreateRooms {
                         "substituindo a que se situava no átrio do palácio.\n" +
                         "O meio de transporte presente é um carro de cavalos britânico do século " +
                         "XIX.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_cavalaricas1,
+                        R.drawable.room_cavalaricas2,
+                        R.drawable.room_cavalaricas3},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {{
                     add(obj_cavalarica_arreios);
@@ -285,7 +294,9 @@ public class CreateRooms {
                         "forma inventados nas cozinhas dos mosteiros e conventos barrocos dos" +
                         " quais se referem, a título de exemplo, papos de anjo, beijos e " +
                         "barrigas de freira, toucinho-do-céu e manjar celeste.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_cozinha1,
+                        R.drawable.room_cozinha2,
+                        R.drawable.room_cozinha3},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {{
                     add(obj_cozinha_roda);
@@ -308,7 +319,9 @@ public class CreateRooms {
                         "anos, um Tulipeiro da Virgínia. Na época, era considerada como uma " +
                         "planta exótica apreciada pela nobreza. Na Horta cultivavam-se " +
                         "legumes e plantas medicinais.\n\n",
-                new int[] {},
+                new int[] {R.drawable.room_jardins1,
+                        R.drawable.room_jardins2,
+                        R.drawable.room_jardins3},
                 R.raw.sound_sample,
                 new ArrayList<MObject>() {}));
     }

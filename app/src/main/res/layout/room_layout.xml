@@ -84,6 +84,8 @@
         <Button
             android:id="@+id/sound_button"
             android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:text="@string/udio_guia" />
