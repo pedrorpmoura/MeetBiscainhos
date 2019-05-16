@@ -50,7 +50,7 @@ public class QuizFragment extends Fragment {
             {"Em que século foi fundado o palácio dos Biscainhos?", "século 17", "século 20", "século 6", "século 21", "0"},
             {"Qual é o estilo arquitetônico do Museu dos Biscainhos?", "estilo Barroco", "estilo Manuelino", "estilo Gótico", "estilo Rocócó", "0"},
             {"Em que parte da casa é que os convidados eram recebidos?", "na entrada", "no jardim", "no oratório", "sala de jantar", "0"},
-            {"O que representa este azulejo que está no salão nobre? (Imagem)", "montaria", "jardinagem", "pintura", "montaria", "0"},
+            {"O que representa este azulejo que está no salão nobre?", "montaria", "jardinagem", "pintura", "montaria", "obj_salao_nobre_azulejos"},
             {"Como se chama a árvore mais antiga do jardim?", "tulipeiro", "arbusto", "laranjeira", "roseira", "0"},
             {"Quem servia as refeições na sala de jantar?", "lacaios/ escravos", "condes", "mordomos", "cozinheiros", "0"},
             {"Qual era a finalidade do oratório?", "rezar", "ler", "descansar", "costurar", "0"},
