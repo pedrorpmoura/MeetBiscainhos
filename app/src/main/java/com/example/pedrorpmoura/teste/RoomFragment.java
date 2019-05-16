@@ -80,8 +80,8 @@ public class RoomFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String currentText = playSound.getText().toString();
-                playSound.setText(currentText.equals("Começar áudio-guia")
-                        ? "Pausar áudio-guia" : "Começar áudio-guia");
+                playSound.setText(currentText.equals("Ouvir áudio-guia")
+                        ? "Pausar áudio-guia" : "Ouvir áudio-guia");
 
                 if(sound.isPlaying()){
                     sound.pause();
@@ -95,7 +95,7 @@ public class RoomFragment extends Fragment {
 
             @Override
             public void onCompletion(MediaPlayer sound) {
-                playSound.setText("Começar áudio-guia");
+                playSound.setText("Ouvir áudio-guia");
             }
 
         });
