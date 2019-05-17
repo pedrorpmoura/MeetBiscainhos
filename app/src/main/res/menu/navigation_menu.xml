@@ -13,6 +13,9 @@
 
         <item android:id="@+id/quiz"
             android:title="@string/quiz"/>
+
+        <item android:id="@+id/informations"
+            android:title="@string/informations"/>
     </group>
 
 

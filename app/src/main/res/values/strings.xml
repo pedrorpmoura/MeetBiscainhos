@@ -7,6 +7,20 @@
     <string name="interactive_map">Mapa Interativo</string>
     <string name="quiz">Quiz</string>
 
+
+    <string name="informations">Informações</string>
+    <string name="location">Localização</string>
+    <string name="location_desc">Rua dos Biscainhos 4700 – 415 Braga</string>
+    <string name="hours">Horário</string>
+    <string name="hours_desc">Terça a Domingo. Encerrado ao público à 2.ª feira e nos feriados de 1 de Janeiro, Domingo de Páscoa, 1 de Maio e 25 de Dezembro. Das 9h30 às 12h45 / 14h00 às 17h30.</string>
+    <string name="prices">Preçário</string>
+    <string name="prices_desc">Bilhete Normal 2 €\nCom mais de 65 anos – 1 €\nPortadora deficiência – 1 €\nJovens (15 – 25 anos), reformados – 1 €</string>
+    <string name="contacts">Contactos</string>
+    <string name="contacts_desc">+351 253 204 650\nFax: +351 253 204 658\nmbiscainhos@culturanorte.gov.pt\nhttp://museus.bragadigital.pt/Biscainhos/\nO Museu dos Biscainho\n- See more at: http://culturanorte.pt/pt/patrimonio/museu-dos-biscainhos/#sthash.xgLdsEGg.dpuf</string>
+
+
+
+
     <string name="open">Open</string>
     <string name="close">Close</string>
 
@@ -17,4 +31,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="udio_guia">Ouvir áudio-guia</string>
     <string name="home_desc">O Palácio dos Biscainhos foi fundado no século XVII e é um notável testemunho do Barroco. O período Barroco distingue-se dos demais pelo extraordinário sentido de pompa, sumptuosidade, luxo e ostentação que se manifestou através da Arte e dos Hábitos Sociais Ao longo de três séculos o palácio foi a habitação de uma família nobre. O atual Museu dos Biscainhos é constituído por: um andar térreo para os compartimentos de serventia (de cariz funcional), o andar superior que possui os espaços de habitabilidade da família nobre e um jardim único que privilegia a expressão patrimonial da época.</string>
+
 </resources>

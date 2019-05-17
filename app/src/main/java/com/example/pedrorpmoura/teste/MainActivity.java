@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
@@ -93,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         mDrawerLayout.closeDrawers();
                         createFragment(new QuizFragment(), "Quiz");
+                        break;
+                    case 4:
+                        mDrawerLayout.closeDrawers();
+                        createFragment(new InformationsFragment(), "Informações");
                         break;
                 }
 
@@ -168,6 +174,12 @@ public class MainActivity extends AppCompatActivity {
         ExpandedMenuModel quiz_item = new ExpandedMenuModel();
         quiz_item.setIconName("Quiz");
         mlistDataHeader.add(quiz_item);
+
+
+        // Informations item
+        ExpandedMenuModel info_item = new ExpandedMenuModel();
+        info_item.setIconName("Informações");
+        mlistDataHeader.add(info_item);
 
         mlistDataChild.put(mlistDataHeader.get(1), rooms_list);
 
