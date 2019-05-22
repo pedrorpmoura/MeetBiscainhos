@@ -240,7 +240,7 @@ public class MapFragment extends Fragment implements View.OnTouchListener {
 
     public void createFragment(Fragment fragment, String title) {
         mFragmentTransaction = getFragmentManager().beginTransaction();
-        mFragmentTransaction.replace(R.id.main_container, fragment);
+        mFragmentTransaction.replace(R.id.main_container, fragment).addToBackStack(null);
         mFragmentTransaction.commit();
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
     }

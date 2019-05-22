@@ -48,7 +48,7 @@ public class QuizFragment extends Fragment {
             {"Os azulejos que estão na figura encontram-se em que parte da casa?", "no salão nobre", "na entrada", "no jardim", "no oratório", "obj_salao_nobre_azulejos"},
             {"A peça (roda de fumeiro) que que está na figura era usada para fazer o quê?", "secar as carnes", "cortar as carnes", "pendurar colheres de pau", "nenhuma das anteriores", "obj_cozinha_roda"},
             {"Em que século foi fundado o palácio dos Biscainhos?", "século 17", "século 20", "século 6", "século 21", "0"},
-            {"Qual é o estilo arquitetônico do Museu dos Biscainhos?", "estilo Barroco", "estilo Manuelino", "estilo Gótico", "estilo Rocócó", "0"},
+            {"Qual é o estilo arquitetónico do Museu dos Biscainhos?", "estilo Barroco", "estilo Manuelino", "estilo Gótico", "estilo Rocócó", "0"},
             {"Em que parte da casa é que os convidados eram recebidos?", "na entrada", "no jardim", "no oratório", "sala de jantar", "0"},
             {"O que representa este azulejo que está no salão nobre?", "montaria", "jardinagem", "pintura", "montaria", "obj_salao_nobre_azulejos"},
             {"Como se chama a árvore mais antiga do jardim?", "tulipeiro", "arbusto", "laranjeira", "roseira", "0"},
@@ -56,7 +56,7 @@ public class QuizFragment extends Fragment {
             {"Qual era a finalidade do oratório?", "rezar", "ler", "descansar", "costurar", "0"},
             {"Quando chegavam os convidados onde ficavam os seus cavalos?", "no átrio", "no jardim", "no cavalariça", "na cozinha", "0"},
             {"Onde podes encontrar esta cadeirinha?", "átrio e escadaria", "quarto", "sala de música e jogo", "gabinete", "obj_entrada_cadeirinha"},
-            {"O que representam os quanto cantos do teto do salão nobre?", "índios brasileiros", "anjos", "gatos", "escravos", "0"},
+            {"O que representam os quatro cantos do teto do salão nobre?", "índios brasileiros", "anjos", "gatos", "escravos", "0"},
             {"Quem é o homem homenageado no teto do salão nobre?", "Beato Minguel de Carvalho", "Papa Francisco", "D. Pedro", "D. Afonso Henriques", "0"},
             {"Se quisesses um livro para ler onde o poderias encontrar?", "no gabinete", "na entrada", "no oratório", "no salão nobre", "0"}
     };

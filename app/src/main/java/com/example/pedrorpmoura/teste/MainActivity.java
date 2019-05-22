@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void createFragment(Fragment fragment, String title) {
         mFragmentTransaction = getSupportFragmentManager().beginTransaction();
-        mFragmentTransaction.replace(R.id.main_container, fragment);
+        mFragmentTransaction.replace(R.id.main_container, fragment).addToBackStack(null);
         mFragmentTransaction.commit();
         getSupportActionBar().setTitle(title);
     }
