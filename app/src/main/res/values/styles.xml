@@ -8,9 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="LaunchScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:windowBackground">@drawable/ic_launcher_background</item>
+    <style name="AppTheme.LaunchScreenTheme">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
     <style name="dialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert"/>

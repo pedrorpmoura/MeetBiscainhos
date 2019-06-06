@@ -39,8 +39,8 @@ public class RoomObjectPicsAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, final int position) {
 
         ImageView imageView = new ImageView(mContext);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setImageResource(mObjects.get(position).getPic());
+        imageView.setMaxHeight(350);
         container.addView(imageView, 0);
 
         imageView.setOnClickListener(new View.OnClickListener() {

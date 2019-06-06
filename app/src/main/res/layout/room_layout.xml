@@ -57,26 +57,13 @@
                 <android.support.design.widget.TabLayout
                     android:id="@+id/tabItems"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content" />
 
-                    <android.support.design.widget.TabItem
-                        android:id="@+id/description_tab_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/description" />
 
-                    <android.support.design.widget.TabItem
-                        android:id="@+id/pics_tab_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/room_objects" />
-
-                </android.support.design.widget.TabLayout>
-
-                <com.example.pedrorpmoura.teste.HeightWrappingViewPager
+                <com.example.pedrorpmoura.teste.WrappingViewPager
                     android:id="@+id/room_tabs_view_pager"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 

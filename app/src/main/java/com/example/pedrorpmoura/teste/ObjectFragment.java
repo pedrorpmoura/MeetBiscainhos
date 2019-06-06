@@ -42,8 +42,9 @@ public class ObjectFragment extends DialogFragment {
 
         ImageView image_view = new ImageView(getActivity());
         image_view.setImageResource(this.object.getPic());
+        image_view.setMaxHeight(900);
         image_view.setAdjustViewBounds(true);
-        image_view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        image_view.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
         TextView name_view = new TextView(getActivity());
         String name_aux = "<b>" + this.object.getName() + "</b>";

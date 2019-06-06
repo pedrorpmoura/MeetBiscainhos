@@ -19,6 +19,7 @@ public class ObjectsPicsFragment2 extends Fragment {
 
     private List<MObject> room_objects;
     private ViewPager mObjectPicsViewPager;
+    private RoomImageAdapter mPicsAdapter;
     private RoomObjectPicsAdapter mObjectPicsAdapter;
 
     public ObjectsPicsFragment2() {
@@ -36,9 +37,13 @@ public class ObjectsPicsFragment2 extends Fragment {
         View root_view = (View) inflater.inflate(R.layout.room_objects_pics_2,
                 container, false);
 
+
         mObjectPicsViewPager = (ViewPager) root_view.findViewById(R.id.object_pics_view_pager);
+        TabLayout tabLayout1 = (TabLayout) root_view.findViewById(R.id.tabDots);
         mObjectPicsAdapter= new RoomObjectPicsAdapter(getActivity(), this.room_objects);
         mObjectPicsViewPager.setAdapter(mObjectPicsAdapter);
+        tabLayout1.setupWithViewPager(mObjectPicsViewPager, true);
+
 
         return root_view;
     }

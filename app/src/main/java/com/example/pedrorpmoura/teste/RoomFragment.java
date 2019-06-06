@@ -19,7 +19,8 @@ public class RoomFragment extends Fragment {
     private MRoom room;
     private ViewPager mPicsViewPager;
     private RoomImageAdapter mPicsAdapter;
-    private HeightWrappingViewPager mTabsViewPager;
+    private TabLayout tabLayout;
+    private WrappingViewPager mTabsViewPager;
     private RoomTabsAdapter mTabsAdapter;
     static MediaPlayer sound;
 
@@ -41,37 +42,64 @@ public class RoomFragment extends Fragment {
         View view = binding.getRoot();
         binding.setRoom(this.room);
 
+
         mPicsViewPager = (ViewPager) view.findViewById(R.id.room_view_pager);
         TabLayout tabLayout1 = (TabLayout) view.findViewById(R.id.tabDots);
         tabLayout1.setupWithViewPager(mPicsViewPager, true);
         mPicsAdapter = new RoomImageAdapter(getActivity(), room.getRoomPics());
         mPicsViewPager.setAdapter(mPicsAdapter);
 
-        TabLayout tabLayout2 = (TabLayout) view.findViewById(R.id.tabItems);
-        mTabsViewPager = (HeightWrappingViewPager) view.findViewById(R.id.room_tabs_view_pager);
-        mTabsAdapter = new RoomTabsAdapter(getChildFragmentManager(),
-                tabLayout2.getTabCount(), this.room);
-        mTabsViewPager.setAdapter(mTabsAdapter);
-        mTabsViewPager.measure(LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        mTabsViewPager.addOnPageChangeListener(
-                new TabLayout.TabLayoutOnPageChangeListener(tabLayout2));
-        tabLayout2.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+
+        mTabsViewPager = (WrappingViewPager) view.findViewById(R.id.room_tabs_view_pager);
+
+        mTabsViewPager.setAdapter(new WrappingFragmentPagerAdapter(getChildFragmentManager()) {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                mTabsViewPager.setCurrentItem(tab.getPosition());
+            public Fragment getItem(int position) {
+                switch (position) {
+                    case 0:
+                        DescriptionFragment desc_frag = new DescriptionFragment();
+                        desc_frag.setDescription(room.getDescription());
+                        return desc_frag;
+                    case 1:
+                        ObjectsPicsFragment2 obj_pics_frag = new ObjectsPicsFragment2();
+                        obj_pics_frag.setRoom_objects(room.getRoom_objects());
+                        return obj_pics_frag;
+                    default:
+                        desc_frag = new DescriptionFragment();
+                        desc_frag.setDescription(room.getDescription());
+                        return desc_frag;
+                }
+            }
+            @Override
+            public int getCount() {
+                return 2;
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
+            public CharSequence getPageTitle(int position) {
+                switch (position) {
+                    case 0:
+                        return "Descrição";
+                    case 1:
+                        return "Peças";
+                    default:
+                        return "Peças";
+                }
             }
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
 
-            }
         });
+
+        tabLayout = (TabLayout) view.findViewById(R.id.tabItems);
+        if (tabLayout != null) {
+            tabLayout.setupWithViewPager(mTabsViewPager);
+        }
+
+
+
+
+
 
         sound = MediaPlayer.create(getActivity(), room.getSound());
         final Button playSound = (Button) view.findViewById(R.id.sound_button);
